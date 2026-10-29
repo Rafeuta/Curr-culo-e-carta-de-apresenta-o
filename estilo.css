@@ -66,17 +66,13 @@ footer {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%; /* Foca mais na cara e ombros */
   
-  /* O SEGREDO ESTÁ AQUI: */
-  /* O 150% dá o zoom na foto. Se quiseres maior, põe 180% ou 200% */
-  /* O 25% puxa a imagem para cima para focar na cara */
-  object-position: 50% 25%; 
-  transform: scale(1.8); /* Aumenta o zoom da imagem */
+  /* Removemos o transform e o margin-right, e usamos flex-shrink para não esmagar */
+  flex-shrink: 0; 
   
   border: 3px solid #1f3a5f;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  margin-right: 15px; 
-  flex-shrink: 0; /* Impede que o círculo se deforme */
 }
 
 .info-cabecalho h2 {
