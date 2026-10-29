@@ -62,8 +62,8 @@ footer {
 }
 
 .foto-perfil {
-  width: 130px;
-  height: 130px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%; /* Torna a foto redonda */
   object-fit: cover;  /* RECORTA o espaço branco e foca no centro */
   object-position: center 20%; /* Ajusta para focar na cara e ombros */
