@@ -62,20 +62,21 @@ footer {
 }
 
 .foto-perfil {
-  width: 180px;      /* 180px ou 200px é o tamanho ideal, 240px pode ficar demasiado grande no ecrã */
+  width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
   
-  /* A MAGIA ACONTECE AQUI: Damos zoom para aproximar a tua cara */
-  transform: scale(1.6); /* Aumenta o zoom. Se ainda estiver longe, põe 1.8 ou 2 */
-  object-position: center 25%; /* Puxa o foco um bocadinho para cima para centrar na cara */
+  /* O SEGREDO ESTÁ AQUI: */
+  /* O 150% dá o zoom na foto. Se quiseres maior, põe 180% ou 200% */
+  /* O 25% puxa a imagem para cima para focar na cara */
+  object-position: 50% 25%; 
+  transform: scale(1.8); /* Aumenta o zoom da imagem */
   
   border: 3px solid #1f3a5f;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  
-  /* Isto evita que o zoom "fuja" do círculo e estrague o layout */
-  margin-right: 20px; 
+  margin-right: 15px; 
+  flex-shrink: 0; /* Impede que o círculo se deforme */
 }
 
 .info-cabecalho h2 {
