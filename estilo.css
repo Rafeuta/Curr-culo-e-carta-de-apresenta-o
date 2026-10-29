@@ -62,13 +62,20 @@ footer {
 }
 
 .foto-perfil {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%; /* Torna a foto redonda */
-  object-fit: cover;  /* RECORTA o espaço branco e foca no centro */
-  object-position: center 20%; /* Ajusta para focar na cara e ombros */
+  width: 180px;      /* 180px ou 200px é o tamanho ideal, 240px pode ficar demasiado grande no ecrã */
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+  /* A MAGIA ACONTECE AQUI: Damos zoom para aproximar a tua cara */
+  transform: scale(1.6); /* Aumenta o zoom. Se ainda estiver longe, põe 1.8 ou 2 */
+  object-position: center 25%; /* Puxa o foco um bocadinho para cima para centrar na cara */
+  
   border: 3px solid #1f3a5f;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+  /* Isto evita que o zoom "fuja" do círculo e estrague o layout */
+  margin-right: 20px; 
 }
 
 .info-cabecalho h2 {
